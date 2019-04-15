@@ -1,7 +1,7 @@
-package impl;
+package com.deno4ka.learn_spring.impl;
 
-import interfaces.Coach;
-import interfaces.FortuneService;
+import com.deno4ka.learn_spring.interfaces.Coach;
+import com.deno4ka.learn_spring.interfaces.FortuneService;
 
 public class CricketCoach implements Coach {
 
@@ -10,7 +10,7 @@ public class CricketCoach implements Coach {
 	private String team;
 
 	public CricketCoach() {
-//		System.out.println("impl.CricketCoach: inside no-arg constructor");
+//		System.out.println("com.deno4ka.learn_spring.impl.CricketCoach: inside no-arg constructor");
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setFortuneService(FortuneService fortuneService) {
-//		System.out.println("impl.CricketCoach: inside setter method - setFortuneService");
+//		System.out.println("com.deno4ka.learn_spring.impl.CricketCoach: inside setter method - setFortuneService");
 		this.fortuneService = fortuneService;
 	}
 
@@ -33,7 +33,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setEmailAddress(String emailAddress) {
-//		System.out.println("impl.CricketCoach: inside setter method - setEmailAddress");
+//		System.out.println("com.deno4ka.learn_spring.impl.CricketCoach: inside setter method - setEmailAddress");
 		this.emailAddress = emailAddress;
 	}
 
@@ -42,7 +42,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setTeam(String team) {
-//		System.out.println("impl.CricketCoach: inside setter method - setTeam");
+//		System.out.println("com.deno4ka.learn_spring.impl.CricketCoach: inside setter method - setTeam");
 		this.team = team;
 	}
 

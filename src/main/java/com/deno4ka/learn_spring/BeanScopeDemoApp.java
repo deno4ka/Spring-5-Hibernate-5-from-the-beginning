@@ -1,4 +1,6 @@
-import interfaces.Coach;
+package com.deno4ka.learn_spring;
+
+import com.deno4ka.learn_spring.interfaces.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanScopeDemoApp {

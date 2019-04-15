@@ -7,16 +7,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="myFortune"
-          class="com.deno4ka.learn_spring.impl.HappyFortuneService"/>
-
-    <bean id="myCoach"
-          class="com.deno4ka.learn_spring.impl.TrackCoach"
-          scope="prototype"
-          init-method="doMyStartupStuff"
-          destroy-method="doMyCleanStuffYoYo">
-        <!--set up constructor injection-->
-        <constructor-arg type="com.deno4ka.learn_spring.interfaces.FortuneService" ref="myFortune"/>
-    </bean>
+    <context:component-scan base-package="com.deno4ka.learn_spring" />
 
 </beans>

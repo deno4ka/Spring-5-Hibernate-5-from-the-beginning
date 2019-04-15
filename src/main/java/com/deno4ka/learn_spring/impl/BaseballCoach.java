@@ -1,7 +1,7 @@
-package impl;
+package com.deno4ka.learn_spring.impl;
 
-import interfaces.Coach;
-import interfaces.FortuneService;
+import com.deno4ka.learn_spring.interfaces.Coach;
+import com.deno4ka.learn_spring.interfaces.FortuneService;
 
 public class BaseballCoach implements Coach {
 

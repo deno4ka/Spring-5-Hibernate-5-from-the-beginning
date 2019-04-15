@@ -11,16 +11,16 @@
     <context:property-placeholder location="sport.properties"/>
 
     <bean id="myFortune"
-          class="impl.HappyFortuneService"/>
+          class="com.deno4ka.learn_spring.impl.HappyFortuneService"/>
 
     <bean id="myCoach"
-          class="impl.TrackCoach">
+          class="com.deno4ka.learn_spring.impl.TrackCoach">
         <!--set up constructor injection-->
-        <constructor-arg type="interfaces.FortuneService" ref="myFortune"/>
+        <constructor-arg type="com.deno4ka.learn_spring.interfaces.FortuneService" ref="myFortune"/>
     </bean>
 
     <bean id="myCricketCoach"
-          class="impl.CricketCoach">
+          class="com.deno4ka.learn_spring.impl.CricketCoach">
 
         <!--set up setter injection-->
         <property name="fortuneService" ref="myFortune"/>

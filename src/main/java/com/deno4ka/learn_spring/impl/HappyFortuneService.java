@@ -1,6 +1,6 @@
-package impl;
+package com.deno4ka.learn_spring.impl;
 
-import interfaces.FortuneService;
+import com.deno4ka.learn_spring.interfaces.FortuneService;
 
 public class HappyFortuneService implements FortuneService {
 
