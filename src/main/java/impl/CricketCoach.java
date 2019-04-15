@@ -1,3 +1,8 @@
+package impl;
+
+import interfaces.Coach;
+import interfaces.FortuneService;
+
 public class CricketCoach implements Coach {
 
 	private FortuneService fortuneService;
@@ -5,7 +10,7 @@ public class CricketCoach implements Coach {
 	private String team;
 
 	public CricketCoach() {
-		System.out.println("CricketCoach: inside no-arg constructor");
+//		System.out.println("impl.CricketCoach: inside no-arg constructor");
 	}
 
 	@Override
@@ -19,7 +24,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("CricketCoach: inside setter method - setFortuneService");
+//		System.out.println("impl.CricketCoach: inside setter method - setFortuneService");
 		this.fortuneService = fortuneService;
 	}
 
@@ -28,7 +33,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setEmailAddress(String emailAddress) {
-		System.out.println("CricketCoach: inside setter method - setEmailAddress");
+//		System.out.println("impl.CricketCoach: inside setter method - setEmailAddress");
 		this.emailAddress = emailAddress;
 	}
 
@@ -37,7 +42,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setTeam(String team) {
-		System.out.println("CricketCoach: inside setter method - setTeam");
+//		System.out.println("impl.CricketCoach: inside setter method - setTeam");
 		this.team = team;
 	}
 

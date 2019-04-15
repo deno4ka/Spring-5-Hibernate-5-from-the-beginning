@@ -1,3 +1,8 @@
+package impl;
+
+import interfaces.Coach;
+import interfaces.FortuneService;
+
 public class TrackCoach implements Coach {
 
 	private FortuneService fortuneService;
@@ -16,6 +21,14 @@ public class TrackCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return "Just Do It: " + fortuneService.getFortune();
+	}
+
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: inside method doMyStartupStuff");
+	}
+
+	public void doMyCleanStuffYoYo() {
+		System.out.println("TrackCoach: inside method doMyCleanStuffYoYo");
 	}
 
 }

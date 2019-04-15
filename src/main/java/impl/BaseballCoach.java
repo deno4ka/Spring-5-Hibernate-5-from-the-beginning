@@ -1,3 +1,8 @@
+package impl;
+
+import interfaces.Coach;
+import interfaces.FortuneService;
+
 public class BaseballCoach implements Coach {
 
 	private FortuneService fortuneService;

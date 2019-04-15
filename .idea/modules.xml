@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-demo-annotations/spring-demo-annotations.iml" filepath="$PROJECT_DIR$/spring-demo-annotations/spring-demo-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring_5_hibernate_5_empty.iml" filepath="$PROJECT_DIR$/.idea/spring_5_hibernate_5_empty.iml" />
     </modules>
   </component>

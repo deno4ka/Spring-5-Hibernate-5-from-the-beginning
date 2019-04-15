@@ -1,3 +1,7 @@
+package impl;
+
+import interfaces.FortuneService;
+
 public class HappyFortuneService implements FortuneService {
 
 	@Override

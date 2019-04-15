@@ -1,7 +1,10 @@
+import impl.TrackCoach;
+import interfaces.Coach;
+
 public class MyApp {
 
 	public static void main(String[] args) {
-//		Coach theCoach = new BaseballCoach();
+//		interfaces.Coach theCoach = new impl.BaseballCoach();
 		Coach theCoach = new TrackCoach();
 		System.out.println(theCoach.getDailyWorkout());
 	}
