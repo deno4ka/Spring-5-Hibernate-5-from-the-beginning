@@ -1,6 +1,6 @@
-package com.deno4ka.learn_spring;
+package com.deno4ka.learn.spring;
 
-import com.deno4ka.learn_spring.interfaces.Coach;
+import com.deno4ka.learn.spring.interfaces.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnnotationDemoApp {
@@ -9,6 +9,7 @@ public class AnnotationDemoApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Coach theCoach = context.getBean("tennisCoach", Coach.class);
 		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
 		context.close();
 	}
 

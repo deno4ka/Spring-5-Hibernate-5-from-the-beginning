@@ -1,7 +1,7 @@
-package com.deno4ka.learn_spring.impl;
+package com.deno4ka.learn.spring.impl;
 
-import com.deno4ka.learn_spring.interfaces.Coach;
-import com.deno4ka.learn_spring.interfaces.FortuneService;
+import com.deno4ka.learn.spring.interfaces.FortuneService;
+import com.deno4ka.learn.spring.interfaces.Coach;
 
 public class TrackCoach implements Coach {
 

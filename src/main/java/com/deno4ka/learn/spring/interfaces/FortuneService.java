@@ -1,4 +1,4 @@
-package com.deno4ka.learn_spring.interfaces;
+package com.deno4ka.learn.spring.interfaces;
 
 public interface FortuneService {
 

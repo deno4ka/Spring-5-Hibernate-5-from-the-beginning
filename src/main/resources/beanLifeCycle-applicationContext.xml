@@ -8,14 +8,14 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="myFortune"
-          class="com.deno4ka.learn_spring.impl.HappyFortuneService"/>
+          class="com.deno4ka.learn.spring.impl.HappyFortuneService"/>
 
     <bean id="myCoach"
-          class="com.deno4ka.learn_spring.impl.TrackCoach"
+          class="com.deno4ka.learn.spring.impl.TrackCoach"
           init-method="doMyStartupStuff"
           destroy-method="doMyCleanStuffYoYo">
         <!--set up constructor injection-->
-        <constructor-arg type="com.deno4ka.learn_spring.interfaces.FortuneService" ref="myFortune"/>
+        <constructor-arg type="com.deno4ka.learn.spring.interfaces.FortuneService" ref="myFortune"/>
     </bean>
 
 </beans>
