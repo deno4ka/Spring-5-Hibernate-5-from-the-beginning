@@ -5,6 +5,7 @@
          id="WebApp_ID" version="4.0">
 
     <display-name>spring-mvc-demo</display-name>
+    <absolute-ordering/>
 
     <servlet>
         <servlet-name>dispatcher</servlet-name>
