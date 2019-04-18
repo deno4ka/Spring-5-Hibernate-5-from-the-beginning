@@ -1,4 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
+!/lib
 ### Java template
 # Compiled class files and folder
 *.class
@@ -14,7 +14,7 @@ classes/**
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
