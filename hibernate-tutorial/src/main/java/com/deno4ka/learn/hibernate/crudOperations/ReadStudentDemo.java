@@ -1,13 +1,19 @@
-package com.deno4ka.learn.hibernate;
+package com.deno4ka.learn.hibernate.crudOperations;
 
 import com.deno4ka.learn.hibernate.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class ReadStudentDemo {
 
 	public static void main(String[] args) {
+
+		Logger log = Logger.getLogger("org.hibernate");
+		log.setLevel(Level.WARNING);
 
 		SessionFactory factory = new Configuration()
 				.configure("hibernate.cfg.xml")

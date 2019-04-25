@@ -1,4 +1,4 @@
-package com.deno4ka.learn.hibernate;
+package com.deno4ka.learn.hibernate.crudOperations;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
