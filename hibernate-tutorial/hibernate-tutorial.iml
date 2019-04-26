@@ -14,7 +14,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="Entities" value="0cca88b9-b2ec-4b8a-8321-03e595fbdab7" />
+          <factory-entry name="Entities" value="f4986e20-c1b7-4fe1-984b-10c844087429" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
