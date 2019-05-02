@@ -47,7 +47,7 @@ public class Instructor {
 		this.email = email;
 	}
 
-	public void addCource(Course course) {
+	public void addCourse(Course course) {
 		if (courseList == null) {
 			courseList = new ArrayList<>();
 		}
@@ -59,12 +59,14 @@ public class Instructor {
 
 	@Override
 	public String toString() {
-		return "Instructor{" +
-				"id=" + id +
-				", firstName='" + firstName + '\'' +
-				", lastName='" + lastName + '\'' +
-				", email='" + email + '\'' +
-				'}';
+		return "Instructor {" +
+				"\n\tid = " + id +
+				",\n\tfirstName = '" + firstName + '\'' +
+				",\n\tlastName = '" + lastName + '\'' +
+				",\n\temail = '" + email + '\'' +
+				",\n\tinstructorDetail = " + instructorDetail +
+//				",\n\tcourseList = " + courseList +
+				"\n}";
 	}
 
 	public int getId() {

@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CreateInstructorDemo {
+public class CreateCourseDemo {
 
 	public static void main(String[] args) {
 
@@ -25,15 +25,19 @@ public class CreateInstructorDemo {
 				.buildSessionFactory()) {
 
 			try (Session session = factory.getCurrentSession()) {
-
-				Instructor instructor = new Instructor("Susan", "Public", "susan@luv2code.com");
-				InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com", "Video Games");
-				instructor.setInstructorDetail(instructorDetail);
+				final int INSTRUCTOR_ID = 1;
 
 				session.beginTransaction();
 
-				System.out.println("Saving instructor: " + instructor);
-				session.save(instructor);
+				Instructor instructor = session.get(Instructor.class, INSTRUCTOR_ID);
+				Course course1 = new Course("Air Guitar - The Ultimate Guide");
+				Course course2 = new Course("The Pinball MasterClass");
+				instructor.addCourse(course1);
+				instructor.addCourse(course2);
+
+				System.out.println("Saving instructor with courses:\n" + course1 + "\n" + course2);
+				session.save(course1);
+				session.save(course2);
 
 				session.getTransaction().commit();
 

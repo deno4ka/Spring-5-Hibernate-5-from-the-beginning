@@ -7,10 +7,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CreateInstructorDemo {
+public class GetInstructorCoursesDemo {
 
 	public static void main(String[] args) {
 
@@ -25,15 +26,14 @@ public class CreateInstructorDemo {
 				.buildSessionFactory()) {
 
 			try (Session session = factory.getCurrentSession()) {
-
-				Instructor instructor = new Instructor("Susan", "Public", "susan@luv2code.com");
-				InstructorDetail instructorDetail = new InstructorDetail("http://www.youtube.com", "Video Games");
-				instructor.setInstructorDetail(instructorDetail);
+				final int INSTRUCTOR_ID = 1;
 
 				session.beginTransaction();
 
-				System.out.println("Saving instructor: " + instructor);
-				session.save(instructor);
+				Instructor instructor = session.get(Instructor.class, INSTRUCTOR_ID);
+				System.out.println("Instructor:\n" + instructor);
+				System.out.println("Courses:\n" + instructor.getCourseList());
+//				List<Course> courseList = instructor.getCourseList();
 
 				session.getTransaction().commit();
 
