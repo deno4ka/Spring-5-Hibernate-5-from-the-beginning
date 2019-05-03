@@ -3,6 +3,7 @@ package com.deno4ka.learn.hibernate.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,6 +37,8 @@ public class Instructor {
 	private InstructorDetail instructorDetail;
 
 	@OneToMany(mappedBy = "instructor",
+			fetch = FetchType.LAZY,
+//			fetch = FetchType.EAGER,
 			cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private List<Course> courseList;
 
