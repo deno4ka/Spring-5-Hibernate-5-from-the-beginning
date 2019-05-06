@@ -29,6 +29,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.17" level="application_server_libraries" />
-    <orderEntry type="library" name="libHibernate" level="project" />
+    <orderEntry type="library" exported="" name="libHibernate" level="project" />
   </component>
 </module>
