@@ -14,7 +14,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="Entities" value="f4986e20-c1b7-4fe1-984b-10c844087429" />
+          <factory-entry name="Entities" value="e7a5c92f-1519-45d2-b82d-898a39afc4bb" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
@@ -29,6 +29,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.17" level="application_server_libraries" />
-    <orderEntry type="library" exported="" name="libHibernate" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
