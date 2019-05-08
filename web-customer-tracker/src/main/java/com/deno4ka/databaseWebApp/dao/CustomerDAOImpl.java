@@ -17,6 +17,16 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
+	public Customer getCustomer(int customerId) {
+		Session currentSession = sessionFactory.getCurrentSession();
+//		Query<Customer> query = currentSession.createQuery("from Customer where id =: customerId", Customer.class);
+//		query.setParameter("customerId", customerId);
+//		Customer customer = query.getSingleResult();
+		Customer customer = currentSession.get(Customer.class, customerId);
+		return customer;
+	}
+
+	@Override
 //	@Transactional
 	public List<Customer> getCustomers() {
 		Session currentSession = sessionFactory.getCurrentSession();
@@ -26,9 +36,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 
 	@Override
-	public void saveCustomer(Customer customer) {
+	public void saveOrUpdateCustomer(Customer customer) {
 		Session currentSession = sessionFactory.getCurrentSession();
-		currentSession.save(customer);
+		currentSession.saveOrUpdate(customer);
 	}
 
 }

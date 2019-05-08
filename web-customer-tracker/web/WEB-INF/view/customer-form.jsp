@@ -17,7 +17,10 @@
         <div id="container">
             <h3>Save Customer</h3>
 
-            <form:form action="saveCustomer" modelAttribute="customer" method="post">
+            <form:form action="saveOrUpdateCustomer" modelAttribute="customer" method="post">
+
+                <form:hidden path="id" />
+
                 <table>
                     <tbody>
                         <tr>
