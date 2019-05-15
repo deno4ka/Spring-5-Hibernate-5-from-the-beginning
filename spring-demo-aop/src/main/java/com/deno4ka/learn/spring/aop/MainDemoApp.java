@@ -2,6 +2,7 @@ package com.deno4ka.learn.spring.aop;
 
 import com.deno4ka.learn.spring.aop.dao.AccountDAO;
 import com.deno4ka.learn.spring.aop.dao.MembershipDAO;
+import com.deno4ka.learn.spring.aop.model.Account;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainDemoApp {
@@ -10,10 +11,12 @@ public class MainDemoApp {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
-		accountDAO.addAccount();
+		accountDAO.addAccount(new Account(), true);
+		accountDAO.doWork();
 //		System.out.println("\n let's call it again!\n");
 //		accountDAO.addAccount();
 		membershipDAO.addSillyMember();
+		membershipDAO.goToSleep();
 		context.close();
 	}
 
