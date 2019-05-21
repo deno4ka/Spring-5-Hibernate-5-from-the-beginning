@@ -26,7 +26,7 @@ public class MyDemoLoggingAspect {
 //	@Before("execution(public void com.deno4ka.learn.spring.aop.dao.AccountDAO.addAccount())") // for specific class
 //	@Before("execution(public void com.deno4ka.learn.spring.aop.dao.*DAO.addAccount())")
 //	@Before(POINT_CUT) // for all methods in package
-	@Before("myPointCut()") // for all methods in package
+//	@Before("myPointCut()") // for all methods in package
 	public void beforeAddAccountAdvice () {
 		System.out.println("\n=====>>> Executing @Before advice on addAccount()");
 	}
