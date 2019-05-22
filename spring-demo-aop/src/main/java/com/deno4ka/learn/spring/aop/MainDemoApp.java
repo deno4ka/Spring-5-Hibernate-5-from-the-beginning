@@ -11,8 +11,8 @@ public class MainDemoApp {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
 		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
-		accountDAO.addAccount(new Account(), true);
-//		accountDAO.doWork();
+		accountDAO.addAccount(new Account("admin", "system"), true);
+		accountDAO.doWork();
 		accountDAO.setName("foobar");
 		accountDAO.setServiceCode("silver");
 		accountDAO.getName();

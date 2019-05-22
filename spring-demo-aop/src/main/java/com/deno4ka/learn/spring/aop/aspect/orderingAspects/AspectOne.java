@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AspectOne {
 
-	@Before("com.deno4ka.learn.spring.aop.aspect.orderingAspects.AopExpressions.forDaoPackageNoGetterSetter()")
+//	@Before("com.deno4ka.learn.spring.aop.aspect.orderingAspects.AopExpressions.forDaoPackageNoGetterSetter()")
 	public void beforeAddAccountAdvice () {
 		System.out.println("\n=====>>> Executing order 1 ONE");
 	}
