@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoPointcutDeclarations {
 
-	@Pointcut("execution(* com.deno4ka.learn.spring.aop.dao.*.*(..))") // for all methods in package
-	public void forDaoPackage() {}
+//	@Pointcut("execution(* com.deno4ka.learn.spring.aop.dao.*.*(..))") // for all methods in package
+//	public void forDaoPackage() {}
 
 //	@Before("forDaoPackage()")
 	public void beforeAddAccountAdvice () {

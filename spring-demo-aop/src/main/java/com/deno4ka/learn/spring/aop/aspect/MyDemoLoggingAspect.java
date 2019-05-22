@@ -11,8 +11,8 @@ public class MyDemoLoggingAspect {
 
 	private final String POINT_CUT = "execution(* com.deno4ka.learn.spring.aop.dao.*.*(..))";
 
-	@Pointcut("execution(* com.deno4ka.learn.spring.aop.dao.*.*(..))")
-	public void myPointCut() {}
+//	@Pointcut("execution(* com.deno4ka.learn.spring.aop.dao.*.*(..))")
+//	public void myPointCut() {}
 
 //	@Before("execution(public void addAccount())") // for any class
 //	@Before("execution(public void add*())") // using wildcard for any class with method name starting with 'add'
