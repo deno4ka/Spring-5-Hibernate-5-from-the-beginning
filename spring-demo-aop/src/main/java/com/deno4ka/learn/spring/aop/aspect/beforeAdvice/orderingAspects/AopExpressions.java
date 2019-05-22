@@ -1,4 +1,4 @@
-package com.deno4ka.learn.spring.aop.aspect.orderingAspects;
+package com.deno4ka.learn.spring.aop.aspect.beforeAdvice.orderingAspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;

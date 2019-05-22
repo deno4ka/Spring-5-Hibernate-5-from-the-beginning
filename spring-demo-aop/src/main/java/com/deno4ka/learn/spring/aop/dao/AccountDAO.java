@@ -3,6 +3,9 @@ package com.deno4ka.learn.spring.aop.dao;
 import com.deno4ka.learn.spring.aop.model.Account;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class AccountDAO {
 
@@ -11,6 +14,14 @@ public class AccountDAO {
 
 	public void addAccount(Account account, boolean vipFlag) {
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
+	}
+
+	public List<Account> findAccounts() {
+		List<Account> accountList = new ArrayList<>();
+		accountList.add(new Account("John", "Silver"));
+		accountList.add(new Account("Luca", "Gold"));
+		accountList.add(new Account("Madhu", "Platinum"));
+		return accountList;
 	}
 
 	public boolean doWork() {

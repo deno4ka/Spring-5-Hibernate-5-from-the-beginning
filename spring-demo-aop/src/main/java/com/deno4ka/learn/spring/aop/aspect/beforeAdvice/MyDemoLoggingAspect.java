@@ -1,9 +1,8 @@
-package com.deno4ka.learn.spring.aop.aspect;
+package com.deno4ka.learn.spring.aop.aspect.beforeAdvice;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
@@ -33,7 +32,7 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>> Executing @Before advice on addAccount()");
 	}
 
-	@Before("com.deno4ka.learn.spring.aop.aspect.orderingAspects.AopExpressions.forDaoPackageNoGetterSetter()")
+//	@Before("com.deno4ka.learn.spring.aop.aspect.beforeAdvice.orderingAspects.AopExpressions.forDaoPackageNoGetterSetter()")
 	public void beforeAddAccountAdvice (JoinPoint joinPoint) {
 		System.out.println("\n=====>>> Executing @Before advice on addAccount()");
 		MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
