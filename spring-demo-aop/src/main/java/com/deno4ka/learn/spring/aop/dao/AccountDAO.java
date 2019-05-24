@@ -16,7 +16,8 @@ public class AccountDAO {
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
 	}
 
-	public List<Account> findAccounts() {
+	public List<Account> findAccounts(boolean tripWire) {
+		if (tripWire) throw new RuntimeException("No soup for you!!!");
 		List<Account> accountList = new ArrayList<>();
 		accountList.add(new Account("John", "Silver"));
 		accountList.add(new Account("Luca", "Gold"));

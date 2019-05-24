@@ -23,7 +23,12 @@ public class MainDemoApp {
 //		accountDAO.addAccount();
 //		membershipDAO.addSillyMember();
 //		membershipDAO.goToSleep();
-		List<Account> accountList = accountDAO.findAccounts();
+		List<Account> accountList = null;
+		try {
+			accountList = accountDAO.findAccounts(true);
+		} catch (Exception e) {
+			System.out.println("mainApp ... caught  exception: " + e);
+		}
 		System.out.println("\n<<<<>>>> Printed from mainApp: accountList: " + accountList);
 		context.close();
 	}
