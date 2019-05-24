@@ -18,20 +18,20 @@ public class MyDemoAfter {
 	@Pointcut("execution(* com.deno4ka.learn.spring.aop.dao.AccountDAO.findAccounts(..))")
 	public void findAccountsPointcut() {}
 
-	@After("findAccountsPointcut()")
+//	@After("findAccountsPointcut()")
 	public void afterFinallyFindAccount(JoinPoint joinPoint) {
 		String methodName = joinPoint.getSignature().toShortString();
 		System.out.println("\n=====>>> Executing @After (finally) on method: " + methodName);
 	}
 
-	@AfterThrowing(pointcut = "findAccountsPointcut()", throwing = "theExc")
+//	@AfterThrowing(pointcut = "findAccountsPointcut()", throwing = "theExc")
 	public void afterThrowingFindAccountAdvice(JoinPoint joinPoint, Throwable theExc) {
 		String methodName = joinPoint.getSignature().toShortString();
 		System.out.println("\n=====>>> Executing @AfterThrowing on method: " + methodName);
 		System.out.println("=====>>> The Exception is: " + theExc + "\n");
 	}
 
-	@AfterReturning(pointcut = "findAccountsPointcut()", returning = "accountList")
+//	@AfterReturning(pointcut = "findAccountsPointcut()", returning = "accountList")
 	public void afterReturningFindAccountsAdvice (JoinPoint joinPoint, List<Account> accountList) {
 		System.out.println("\n=====>>> Executing @AfterReturning advice on findAccounts()");
 		String methodName = joinPoint.getSignature().toShortString();
