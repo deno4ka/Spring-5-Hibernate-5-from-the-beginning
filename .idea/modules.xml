@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hibernate-tutorial/hibernate-tutorial.iml" filepath="$PROJECT_DIR$/hibernate-tutorial/hibernate-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-cool-web-app/my-cool-web-app.iml" filepath="$PROJECT_DIR$/my-cool-web-app/my-cool-web-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-demo-annotations/spring-demo-annotations.iml" filepath="$PROJECT_DIR$/spring-demo-annotations/spring-demo-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-demo-aop/spring-demo-aop.iml" filepath="$PROJECT_DIR$/spring-demo-aop/spring-demo-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-mvc-demo/spring-mvc-demo.iml" filepath="$PROJECT_DIR$/spring-mvc-demo/spring-mvc-demo.iml" />

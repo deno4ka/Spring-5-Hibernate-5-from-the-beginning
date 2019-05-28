@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="my-cool-web-app:war">
+    <output-path>$PROJECT_DIR$/my-cool-web-app/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>my-cool-web-app</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mycoolwebapp.war">
+      <element id="artifact" artifact-name="my-cool-web-app:war exploded" />
+    </root>
+  </artifact>
+</component>
