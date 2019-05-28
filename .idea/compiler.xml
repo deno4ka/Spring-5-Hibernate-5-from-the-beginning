@@ -7,16 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="my-cool-web-app" />
-        <module name="spring_5_hibernate_5_empty" />
+        <module name="spring-security-demo" />
         <module name="web-customer-tracker-aop" />
         <module name="spring-demo-aop" />
         <module name="spring-demo-annotations" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-demo-annotations" target="8" />
-      <module name="spring-demo-aop" target="8" />
-      <module name="spring_5_hibernate_5_empty" target="8" />
+      <module name="spring-demo-annotations" target="1.8" />
+      <module name="spring-demo-aop" target="1.8" />
+      <module name="spring-security-demo" target="1.8" />
+      <module name="spring_5_hibernate_5_empty" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

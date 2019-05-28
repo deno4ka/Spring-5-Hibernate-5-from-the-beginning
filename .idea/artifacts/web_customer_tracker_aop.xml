@@ -2,12 +2,19 @@
   <artifact type="exploded-war" name="web-customer-tracker-aop">
     <output-path>$PROJECT_DIR$/classes/artifacts/web_customer_tracker_aop</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="web-customer-tracker-aop/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="web-customer-tracker-aop" />
         </element>
-        <element id="directory" name="lib" />
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.4.2.Final" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.1.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.1.7.RELEASE" />
+        </element>
       </element>
       <element id="artifact" artifact-name="hibernate-tutorial:war exploded" />
     </root>

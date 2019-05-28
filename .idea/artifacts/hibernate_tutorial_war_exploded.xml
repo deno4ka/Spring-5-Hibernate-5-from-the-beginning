@@ -6,7 +6,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="hibernate-tutorial" />
         </element>
-        <element id="directory" name="lib" />
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.4.2.Final" />
+        </element>
       </element>
     </root>
   </artifact>

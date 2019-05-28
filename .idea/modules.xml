@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-demo-annotations/spring-demo-annotations.iml" filepath="$PROJECT_DIR$/spring-demo-annotations/spring-demo-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-demo-aop/spring-demo-aop.iml" filepath="$PROJECT_DIR$/spring-demo-aop/spring-demo-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-mvc-demo/spring-mvc-demo.iml" filepath="$PROJECT_DIR$/spring-mvc-demo/spring-mvc-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security-demo/spring-security-demo.iml" filepath="$PROJECT_DIR$/spring-security-demo/spring-security-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring_5_hibernate_5_empty.iml" filepath="$PROJECT_DIR$/.idea/spring_5_hibernate_5_empty.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-customer-tracker-aop/web-customer-tracker-aop.iml" filepath="$PROJECT_DIR$/web-customer-tracker-aop/web-customer-tracker-aop.iml" />
     </modules>
