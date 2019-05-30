@@ -35,21 +35,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests() // restrict access based on the HttpServletRequest
-				.anyRequest().authenticated() // any request must be authenticated
-					.and()
-				.formLogin()
-					.loginPage("/showMyLogingPage") // specify request mapping
-					.loginProcessingUrl("/authenticateTheUser") // send data to this URL for processing
-					.defaultSuccessUrl("/", true)
-					.permitAll(); // everyone can see login page
-//		http.authorizeRequests()
-//				.anyRequest().authenticated()
-//				.and()
+//		http.authorizeRequests().anyRequest().permitAll();
+//		http.authorizeRequests() // restrict access based on the HttpServletRequest
+//				.anyRequest().authenticated() // any request must be authenticated
+//					.and()
 //				.formLogin()
-//				.loginPage("/showMyLoginPage")
-//				.loginProcessingUrl("/authenticateTheUser")
-//				.permitAll();
+//					.loginPage("/showMyLoginPage") // specify request mapping
+//					.loginProcessingUrl("/authenticateTheUser") // send data to this URL for processing
+//					.defaultSuccessUrl("/", true)
+//					.permitAll(); // everyone can see login page
+		http.authorizeRequests()
+				.anyRequest().authenticated()
+				.and()
+				.formLogin()
+				.loginPage("/showMyLoginPage")
+				.loginProcessingUrl("/authenticateTheUser")
+				.permitAll();
 	}
 
 	@Bean
