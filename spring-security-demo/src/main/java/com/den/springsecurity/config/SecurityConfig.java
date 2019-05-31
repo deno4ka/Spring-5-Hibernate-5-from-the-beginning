@@ -37,11 +37,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.anyRequest().authenticated()
-				.and()
+					.and()
 				.formLogin()
-				.loginPage("/showMyLoginPage")
-				.loginProcessingUrl("/authenticateTheUser")
-				.permitAll();
+					.loginPage("/showMyLoginPage")
+					.loginProcessingUrl("/authenticateTheUser")
+					.permitAll()
+					.and()
+				.logout()
+//					.logoutUrl("/logout")
+					.permitAll();
 	}
 
 	@Bean
