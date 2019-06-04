@@ -28,9 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		auth.inMemoryAuthentication() // safe version, without deprecated method
 				.passwordEncoder(passwordEncoder())
-				.withUser("john").password(ENCODED_PASSWORD).roles("EMPLOYEE").and()
-				.withUser("mary").password(ENCODED_PASSWORD).roles("MANAGER").and()
-				.withUser("susan").password(ENCODED_PASSWORD).roles("ADMIN");
+				.withUser("john").password(ENCODED_PASSWORD).roles("ORDINARY", "EMPLOYEE").and()
+				.withUser("mary").password(ENCODED_PASSWORD).roles("TOP", "MANAGER").and()
+				.withUser("susan").password(ENCODED_PASSWORD).roles("SUPER", "ADMIN");
 	}
 
 	@Override
