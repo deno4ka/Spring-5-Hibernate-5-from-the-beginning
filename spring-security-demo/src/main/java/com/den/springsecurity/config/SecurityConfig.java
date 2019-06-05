@@ -15,6 +15,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+	private static final String EMPLOYEE = "EMPLOYEE";
+	private static final String MANAGER = "MANAGER";
+	private static final String ADMIN = "ADMIN";
 	private static final String ENCODED_PASSWORD = "$2a$10$qY66kvHjO18UvaC6I59pSOsaVV3Zcq3TEcIIkur2CgMVwzYPdALCe"; // "test123"
 
 	@Override
@@ -28,24 +31,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		auth.inMemoryAuthentication() // safe version, without deprecated method
 				.passwordEncoder(passwordEncoder())
-				.withUser("john").password(ENCODED_PASSWORD).roles("ORDINARY", "EMPLOYEE").and()
-				.withUser("mary").password(ENCODED_PASSWORD).roles("TOP", "MANAGER").and()
-				.withUser("susan").password(ENCODED_PASSWORD).roles("SUPER", "ADMIN");
+				.withUser("john").password(ENCODED_PASSWORD).roles(EMPLOYEE).and()
+				.withUser("mary").password(ENCODED_PASSWORD).roles(EMPLOYEE, MANAGER).and()
+				.withUser("susan").password(ENCODED_PASSWORD).roles(EMPLOYEE, ADMIN);
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.anyRequest().authenticated()
-					.and()
-				.formLogin()
+				.antMatchers("/").hasRole(EMPLOYEE)
+				.antMatchers("/leaders/**").hasRole(MANAGER)
+				.antMatchers("/systems/**").hasRole(ADMIN)
+//				.anyRequest().authenticated()
+				.and().formLogin()
 					.loginPage("/showMyLoginPage")
 					.loginProcessingUrl("/authenticateTheUser")
 					.permitAll()
-					.and()
-				.logout()
+				.and().logout()
 //					.logoutUrl("/logout")
-					.permitAll();
+					.permitAll()
+				.and().exceptionHandling()
+					.accessDeniedPage("/access-denied");
 	}
 
 	@Bean
