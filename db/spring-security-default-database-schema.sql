@@ -5,8 +5,8 @@ USE `spring_security_demo`;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-    `username` VARCHAR(50) NOT NULL,
-    `password` VARCHAR(50) NOT NULL,
+    `username` VARCHAR(128) NOT NULL,
+    `password` VARCHAR(128) NOT NULL,
     `enabled` TINYINT(1) NOT NULL,
     PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -19,9 +19,12 @@ CREATE TABLE `authorities` (
     CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `users` VALUES ('john', '{noop}test123', 1),
-                           ('mary', '{noop}test123', 1),
-                           ('susan', '{noop}test123', 1);
+# INSERT INTO `users` VALUES ('john', '{noop}test123', 1),
+#                            ('mary', '{noop}test123', 1),
+#                            ('susan', '{noop}test123', 1);
+INSERT INTO `users` VALUES ('john',  '{bcrypt}$2a$10$f02lHiNPKJvK7dMxErHv7ekbQh/vwwbx5YCpMD..uKp.o5Du/j5i2', 1),
+                           ('mary',  '{bcrypt}$2a$10$f02lHiNPKJvK7dMxErHv7ekbQh/vwwbx5YCpMD..uKp.o5Du/j5i2', 1),
+                           ('susan', '{bcrypt}$2a$10$f02lHiNPKJvK7dMxErHv7ekbQh/vwwbx5YCpMD..uKp.o5Du/j5i2', 1);
 
 INSERT INTO `authorities` VALUES ('john', 'ROLE_EMPLOYEE'),
                                  ('mary', 'ROLE_EMPLOYEE'),
