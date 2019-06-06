@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class AppConfig {
 
 	@Autowired
-	private Environment env;
+	private Environment env; // will hold data read from properties files
 
 	private Logger logger = Logger.getLogger(getClass().getName());
 
@@ -43,17 +43,22 @@ public class AppConfig {
 			logger.info(">>>>> jdbc.user=" + env.getProperty("jdbc.user"));
 
 			securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
+			securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
 			securityDataSource.setUser(env.getProperty("jdbc.user"));
 			securityDataSource.setPassword(env.getProperty("jdbc.password"));
 
-			securityDataSource.setMinPoolSize(Integer.parseInt(Optional.ofNullable(env.getProperty("connection.pool.initialPoolSize")).orElse("5")));
-			securityDataSource.setMinPoolSize(Integer.parseInt(Optional.ofNullable(env.getProperty("connection.pool.minPoolSize")).orElse("5")));
-			securityDataSource.setMinPoolSize(Integer.parseInt(Optional.ofNullable(env.getProperty("connection.pool.maxPoolSize")).orElse("20")));
-			securityDataSource.setMinPoolSize(Integer.parseInt(Optional.ofNullable(env.getProperty("connection.pool.maxIdleTime")).orElse("3000")));
+			securityDataSource.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize", "5"));
+			securityDataSource.setMinPoolSize(getIntProperty("connection.pool.minPoolSize", "5"));
+			securityDataSource.setMaxPoolSize(getIntProperty("connection.pool.maxPoolSize", "20"));
+			securityDataSource.setMaxIdleTime(getIntProperty("connection.pool.maxIdleTime", "3000"));
 		} catch (PropertyVetoException e) {
 			throw new RuntimeException(e);
 		}
 		return securityDataSource;
+	}
+
+	private int getIntProperty(String propertyName, String defaultValue) {
+		return Integer.parseInt(Optional.ofNullable(env.getProperty(propertyName)).orElse(defaultValue));
 	}
 
 }
