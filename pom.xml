@@ -12,6 +12,7 @@
         <module>spring-security-demo</module>
         <module>jackson-databind-json-demo</module>
         <module>spring-rest-demo</module>
+        <module>spring-crm-rest-demo</module>
     </modules>
 
     <properties>
