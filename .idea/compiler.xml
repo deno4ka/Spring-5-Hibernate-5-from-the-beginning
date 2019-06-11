@@ -11,6 +11,7 @@
         <module name="jackson-databind-json-demo" />
         <module name="web-customer-tracker-aop" />
         <module name="spring-security-demo" />
+        <module name="spring-rest-demo" />
         <module name="spring-demo-annotations" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
       <module name="jackson-databind-json-demo" target="1.8" />
       <module name="spring-demo-annotations" target="1.8" />
       <module name="spring-demo-aop" target="1.8" />
+      <module name="spring-rest-demo" target="1.8" />
       <module name="spring-security-demo" target="1.8" />
       <module name="spring_5_hibernate_5_empty" target="1.8" />
     </bytecodeTargetLevel>
