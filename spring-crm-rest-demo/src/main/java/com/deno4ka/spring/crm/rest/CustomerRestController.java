@@ -3,6 +3,7 @@ package com.deno4ka.spring.crm.rest;
 import com.deno4ka.spring.crm.entity.Customer;
 import com.deno4ka.spring.crm.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,8 +46,25 @@ public class CustomerRestController {
 
 	@PutMapping("/customers")
 	public Customer updateCustomer(@RequestBody Customer customer) {
+		if (customer == null) {
+			throw new CustomerNotFoundException("invalid data");
+		}
+		Customer existingCustomer = customerService.getCustomer(customer.getId());
+		if (existingCustomer == null) {
+			throw new CustomerNotFoundException("Customer id not found - " + customer.getId());
+		}
 		customerService.saveCustomer(customer);
 		return customer;
+	}
+
+	@DeleteMapping("/customers/{customerId}")
+	public String deleteCustomer(@PathVariable int customerId) {
+		Customer existingCustomer = customerService.getCustomer(customerId);
+		if (existingCustomer == null) {
+			throw new CustomerNotFoundException("Customer id not found - " + customerId);
+		}
+		customerService.deleteCustomer(customerId);
+		return "Deleted customer id - " + customerId;
 	}
 
 }
