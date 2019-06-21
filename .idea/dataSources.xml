@@ -9,7 +9,7 @@
 
 C:/Users/ddvornyi/IdeaProjects/spring_5_hibernate_5_empty/web-customer-tracker/web/WEB-INF/spring-mvc-crud-demo-servlet.xml</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/employee_directory?useSSL=false</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="yearIsDateType" value="false" />
