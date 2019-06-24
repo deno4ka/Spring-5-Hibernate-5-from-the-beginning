@@ -11,12 +11,12 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOImpl implements EmployeeDAO {
+public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	private EntityManager entityManager;
 
 	@Autowired
-	public EmployeeDAOImpl(EntityManager entityManager) {
+	public EmployeeDAOHibernateImpl(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
 
