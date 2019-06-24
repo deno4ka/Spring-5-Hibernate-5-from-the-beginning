@@ -3,6 +3,7 @@ package com.deno4ka.springboot.demo.rest;
 import com.deno4ka.springboot.demo.entity.Employee;
 import com.deno4ka.springboot.demo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +22,7 @@ public class EmployeeController {
 	private EmployeeService employeeService;
 
 	@Autowired
-	public EmployeeController(EmployeeService employeeService) {
+	public EmployeeController(@Qualifier("employeeServiceJpaImpl") EmployeeService employeeService) {
 		this.employeeService = employeeService;
 	}
 
